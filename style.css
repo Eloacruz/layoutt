@@ -108,5 +108,108 @@ html, body {
     background-position: center;
     color: #fff;
 }
-
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container principal */
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  /* Caixa de cima */
+  .top {
+    height: 15%;
+    background-color: #f39c12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+  }
+  
+  /* Parte de baixo */
+  .row {
+    display: flex;
+    flex: 1;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  /* Caixas grandes */
+  .box.big {
+    flex: 1;
+    background-color: #e74c3c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Colunas com caixas pequenas */
+  .col {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: 10px;
+  }
+  
+  /* Caixas pequenas */
+  .box.small {
+    flex: 1;
+    background-color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+  }
+  
+  /* === RESPONSIVO === */
+  
+  /* Tablets: ajustar tamanho sem quebrar layout */
+  @media (max-width: 1024px) {
+    .row {
+      flex-direction: column; /* empilha colunas verticalmente */
+      gap: 10px;
+    }
+  
+    .box.big, .col {
+      width: 100%; /* ocupa toda a largura disponível */
+    }
+  
+    .col {
+      flex-direction: row; /* caixas pequenas lado a lado dentro da coluna */
+      gap: 10px;
+    }
+  
+    .box.small {
+      flex: 1;
+    }
+  }
+  
+  /* Celulares: tudo empilhado verticalmente */
+  @media (max-width: 767px) {
+    .row {
+      flex-direction: column; /* empilha linhas */
+    }
+  
+    .col {
+      flex-direction: column; /* caixas pequenas empilhadas dentro da coluna */
+    }
+  
+    .box.big, .box.small {
+      width: 100%; /* ocupam toda a largura da tela */
+    }
+  }
