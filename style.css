@@ -1,0 +1,112 @@
+/* ===== CONFIGURAÇÃO BÁSICA DA PÁGINA ===== */
+html, body {
+    margin: 0;     /* Remove margens padrão */
+    padding: 0;    /* Remove espaçamento padrão */
+    height: 100%;  /* Faz body ocupar altura total da tela */
+    width: 100%;   /* Faz body ocupar largura total */
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    height: 100vh; /* Ocupa 100% da tela */
+    width: 100vw;  /* Ocupa 100% da largura da tela */
+  }
+  
+  /* ===== CONTAINER PRINCIPAL ===== */
+  .container {
+    display: flex;            /* Usa Flexbox */
+    flex-direction: column;   /* Organiza elementos em coluna (de cima p/ baixo) */
+    border: 2px solid black;  /* Borda em volta do container */
+    width: 100%;              /* Preenche largura da tela */
+    height: 100%;             /* Preenche altura da tela */
+    box-sizing: border-box;   /* Inclui borda e padding dentro do tamanho */
+  }
+  
+  /* ===== CAIXA DE CIMA (1) ===== */
+  .top {
+    border-bottom: 2px solid black; /* Linha separando do resto */
+    padding: 10px;                  /* Espaço interno */
+    font-size: 2rem;                /* Tamanho do número */
+    font-weight: bold;              /* Negrito */
+    text-align: right;              /* Número alinhado à direita */
+    height: 15%;                    /* Ocupa 15% da tela */
+    box-sizing: border-box;
+  }
+  
+  /* ===== LINHA DE BAIXO ===== */
+  .row {
+    display: flex;          /* Ativa flexbox em linha */
+    flex: 1;                /* Ocupa o espaço restante (85% da tela) */
+    gap: 10px;              /* Espaço entre colunas/caixas */
+    padding: 10px;          /* Espaçamento interno */
+    box-sizing: border-box;
+  }
+  
+  /* ===== COLUNAS INTERNAS (8/5 e 7/6) ===== */
+  .col {
+    display: flex;              /* Flexbox */
+    flex-direction: column;     /* Organiza elementos em coluna (um em cima do outro) */
+    flex: 1;                    /* Ocupa espaço proporcional */
+    gap: 10px;                  /* Espaço entre as caixinhas */
+  }
+  
+  /* ===== ESTILO GERAL DAS CAIXAS ===== */
+  .box {
+    display: flex;               /* Centraliza conteúdo */
+    justify-content: center;     /* Centraliza na horizontal */
+    align-items: center;         /* Centraliza na vertical */
+    font-size: 2rem;             /* Tamanho do número */
+    font-weight: bold;           /* Deixa número em negrito */
+    border: 2px solid black;     /* Borda preta */
+    color: #fff;                 /* Texto branco (exceto onde mudamos depois) */
+  }
+  
+  /* Caixas grandes (4 e 3) */
+  .big {
+    flex: 1; /* Elas ocupam mais espaço */
+  }
+  
+  /* Caixas pequenas (8,5,7,6) */
+  .small {
+    flex: 1; /* Crescem proporcionalmente dentro da coluna */
+  }
+  
+  /* ===== CORES INDIVIDUAIS ===== */
+  .box1 { background: #ff9999; }   /* Vermelho claro - caixa 1 */
+  .box4 { background: #66b3ff; }   /* Azul - caixa 4 */
+  .box8 { background: #99ff99; }   /* Verde - caixa 8 */
+  .box5 { background: #ffcc66; }   /* Laranja - caixa 5 */
+  .box7 { background: #ff66cc; }   /* Rosa - caixa 7 */
+  .box6 { background: #9966ff; }   /* Roxo - caixa 6 */
+  .box3 { background: #ffdb4d; color: #000; } /* Amarelo (texto preto p/ contraste) */
+
+  /* ===== IMAGENS NOS QUADRADOS CENTRAIS ===== */
+.box8 {
+    background-image: url('./imagens/6957ef15aa788e1adaa9b2097adc2115.jpg');  /* caminho da imagem */
+    background-size: cover;                /* cobre toda a caixa */
+    background-position: center;           /* centraliza a imagem */
+    color: #fff;                           /* mantém texto visível */
+}
+
+.box5 {
+    background-image: url('./imagens/6957ef15aa788e1adaa9b2097adc2115.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #000;                           /* se a imagem for clara, texto preto */
+}
+
+.box7 {
+    background-image: url('./imagens/6957ef15aa788e1adaa9b2097adc2115.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+.box6 {
+    background-image: url('./imagens/6957ef15aa788e1adaa9b2097adc2115.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+  
